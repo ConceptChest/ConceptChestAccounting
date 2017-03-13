@@ -24,11 +24,16 @@ add_action( 'admin_enqueue_scripts', 'concept_chest_accounting_dashboard_menu_st
 add_action( 'admin_menu', 'concept_chest_account_register_custom_menu_link' );
 function concept_chest_account_register_custom_menu_link(){
     add_menu_page( 'Concept Accounting', 'Concept Accounting', 'manage_options', 'concept-account-main','concept_chest_accounting_custom_menu_link',plugins_url('images/icon.png',__FILE__)); 
+    add_submenu_page( 'concept-account-main','Income', 'Income', 'manage_options', 'concept-account-income','concept_chest_accounting_income_menu_link'); 
+
+    
 }
 
 function concept_chest_accounting_custom_menu_link(){
     include 'includes/ConceptChestAccountsPannel.php';
 }
-
+function concept_chest_accounting_income_menu_link(){
+    include 'includes/ConceptChestIncomePannel.php';
+}
 
 
