@@ -1,4 +1,6 @@
-<form>
+<div class="container form-style-5">
+  <h2>Chart Of Account</h2>
+<form >
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" id="title" placeholder="Title">
@@ -63,8 +65,14 @@
     <label for="areaname">Area Name</label>
     <input type="text" class="form-control" id="areaname" placeholder="Area Name">
   </div>
-    <div class="form-group">
+  <div class="form-group">
     <label for="date">Date</label>
     <input type="date"  class="form-control" id="date" placeholder="Date">
   </div>
+    <div class="form-group">
+        <p>
+    <button type="submit" class="btn btn-default">Save</button>
+        </p>
+    </div>
 </form>
+</div>

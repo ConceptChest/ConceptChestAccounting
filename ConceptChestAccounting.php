@@ -19,6 +19,11 @@ function concept_chest_accounting_dashboard_menu_style($hook) {
         wp_enqueue_style( 'custom_wp_admin_css', plugins_url('css/concept-chest-accounting-style.css', __FILE__) );
 }
 add_action( 'admin_enqueue_scripts', 'concept_chest_accounting_dashboard_menu_style' );
+add_action('admin_enqueue_scripts', 'concept_bootstrap_enqueue_my_styles');
+
+function concept_bootstrap_enqueue_my_styles() {
+    wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+}
 
 
 add_action( 'admin_menu', 'concept_chest_account_register_custom_menu_link' );
