@@ -25,8 +25,9 @@ add_action( 'admin_menu', 'concept_chest_account_register_custom_menu_link' );
 function concept_chest_account_register_custom_menu_link(){
     add_menu_page( 'Concept Accounting', 'Concept Accounting', 'manage_options', 'concept-account-main','concept_chest_accounting_custom_menu_link',plugins_url('images/icon.png',__FILE__)); 
     add_submenu_page( 'concept-account-main','Income', 'Income', 'manage_options', 'concept-account-income','concept_chest_accounting_income_menu_link'); 
-
-    
+    add_submenu_page( 'concept-account-main','Expense', 'Expense', 'manage_options', 'concept-account-expense','concept_chest_accounting_expense_menu_link'); 
+    add_submenu_page( 'concept-account-main','Chart Of Account', 'Chart Of Account', 'manage_options', 'concept-account-coa','concept_chest_accounting_coa_menu_link'); 
+    add_submenu_page( 'concept-account-main','Report', 'Report', 'manage_options', 'concept-account-report','concept_chest_accounting_report_menu_link'); 
 }
 
 function concept_chest_accounting_custom_menu_link(){
@@ -34,6 +35,18 @@ function concept_chest_accounting_custom_menu_link(){
 }
 function concept_chest_accounting_income_menu_link(){
     include 'includes/ConceptChestIncomePannel.php';
+}
+
+function concept_chest_accounting_expense_menu_link(){
+    include 'includes/ConceptChestExpensePannel.php';
+}
+
+function concept_chest_accounting_coa_menu_link(){
+    include 'includes/ConceptChestCOAPannel.php';
+}
+
+function concept_chest_accounting_report_menu_link(){
+    include 'includes/ConceptChestReportPannel.php';
 }
 
 
