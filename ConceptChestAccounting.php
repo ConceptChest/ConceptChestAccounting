@@ -50,3 +50,16 @@ function concept_chest_accounting_report_menu_link(){
 }
 
 
+
+
+/**
+ * The code that runs during plugin activation.
+ * This action is documented in includes/class-class-conceptchestaccounting-activator.php
+ */
+function activate_conceptchestaccounting() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-conceptchestaccounting-activator.php';
+	Conceptchestaccounting_Activator::activate();
+}
+
+
+register_activation_hook( __FILE__, 'activate_conceptchestaccounting' );
